@@ -1,14 +1,12 @@
+const { merge } = require("webpack-merge");
 const path = require("path");
 const HtmlWebackPlugin = require("html-webpack-plugin");
-const BundleAnalyzerPlugin =
-    require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const common = require("./webpack.common.js");
 
-module.exports = {
-    entry: {
-        bundle: path.resolve(__dirname, "src/index.js"),
-    },
+module.exports = merge(common, {
+    mode: "development",
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "dist-dev"),
         filename: "[name][contenthash].js" /* Will refer 'bundle' as a name */,
         clean: true,
         assetModuleFilename: "[name][ext]",
@@ -55,4 +53,4 @@ module.exports = {
         }),
         /* new BundleAnalyzerPlugin(), */
     ],
-};
+});
