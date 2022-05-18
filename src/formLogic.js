@@ -53,8 +53,8 @@ submitButton.addEventListener("click", (event) => {
     /* Populating the form */
     const modalRequest = new ContactRequest(
       document.getElementById("homeDemoFormFullName").value,
-      document.getElementById("homeDemoFormEmail").value,
       document.getElementById("homeDemoFormPhone").value,
+      document.getElementById("homeDemoFormEmail").value,
       document.getElementById("homeDemoFormMessageBox").value,
       document.getElementById("homeDemoFormJobSelect").value,
       document.getElementById("homeDemoFormContactMethod").value,
