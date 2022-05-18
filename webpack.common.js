@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebackPlugin = require("html-webpack-plugin");
+const ESlintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -34,6 +35,7 @@ module.exports = {
       favicon: path.resolve(__dirname, "src/assets/favicon.png"),
       template: path.resolve(__dirname, "src/template.html"),
     }),
+    new ESlintPlugin(),
     /* new BundleAnalyzerPlugin(), */
   ],
 };

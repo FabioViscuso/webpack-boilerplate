@@ -4,3 +4,4 @@ import "./styles/index.css";
 
 window.getDataFromServer = getDataFromServer;
 window.deleteDataFromServer = deleteDataFromServer;
+window.formLogic = formLogic;
