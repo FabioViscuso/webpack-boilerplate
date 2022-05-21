@@ -1,3 +1,9 @@
+# Dependencies
 node_modules/
+
+# Builds
 dist/
 dist-dev/
+
+# Sensitive files
+.env

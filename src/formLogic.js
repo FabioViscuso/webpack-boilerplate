@@ -1,7 +1,10 @@
+import { BACKEND_URL_SEND } from "./constants";
+
 /* Main form class */
 class ContactRequest {
   constructor(
     fullName,
+    age,
     phone,
     email,
     message,
@@ -9,7 +12,8 @@ class ContactRequest {
     contactMethod,
     agreement
   ) {
-    [this.firstName, this.lastName, ...this.otherNames] = fullName.split(" ");
+    [this.firstName, this.lastName] = fullName.split(" ");
+    this.age = age;
     this.phone = phone;
     this.email = email;
     this.message = message;
@@ -19,7 +23,7 @@ class ContactRequest {
   }
 
   sendToServer() {
-    fetch("https://asimpleexpressdemo.herokuapp.com/data", {
+    fetch(BACKEND_URL_SEND || "http://localhost:8080/new-contact", {
       method: "post",
       body: JSON.stringify(this),
       headers: {
@@ -53,6 +57,7 @@ submitButton.addEventListener("click", (event) => {
     /* Populating the form */
     const modalRequest = new ContactRequest(
       document.getElementById("homeDemoFormFullName").value,
+      document.getElementById("homeDemoFormAge").value,
       document.getElementById("homeDemoFormPhone").value,
       document.getElementById("homeDemoFormEmail").value,
       document.getElementById("homeDemoFormMessageBox").value,
