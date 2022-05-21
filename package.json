@@ -1,6 +1,6 @@
 {
-  "name": "webpack-experiment",
-  "description": "Demo webpack project",
+  "name": "webpack-boilerplate",
+  "description": "Boilerplate for quickly building a website with webpack",
   "version": "1.0.0",
   "author": "Fabio Viscuso",
   "license": "MIT",

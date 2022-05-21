@@ -1,3 +1,3 @@
-## Webpack starter
+## Webpack boilerplate
 
-Required dependencies for developing a webapp with webpack
+Required dependencies for developing a site/webapp with plain webpack
